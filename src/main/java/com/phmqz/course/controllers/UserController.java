@@ -15,21 +15,21 @@ import com.phmqz.course.services.UserService;
 @RestController
 @RequestMapping("/users")
 public class UserController {
-	
+
 	@Autowired
 	private UserService userService;
 
 	@GetMapping
 	public ResponseEntity<List<User>> findAll() {
 		List<User> list = userService.findAll();
-		
+
 		return ResponseEntity.ok().body(list);
 	}
-	
+
 	@GetMapping("/{id}")
-	public ResponseEntity<User> findById(@PathVariable Long id){
+	public ResponseEntity<User> findById(@PathVariable Long id) {
 		User user = userService.findById(id);
 		return ResponseEntity.ok().body(user);
 	}
-	
+
 }
