@@ -13,7 +13,7 @@ import com.phmqz.course.entities.Product;
 import com.phmqz.course.services.ProductService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/products")
 public class ProductController {
 
 	@Autowired
